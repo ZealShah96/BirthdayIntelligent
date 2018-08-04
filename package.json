@@ -4,7 +4,9 @@
   "description": "\"# BirthdayIntelligent\"",
   "main": "index.js",
   "dependencies": {
-    "date-and-time": "^0.6.2"
+    "date-and-time": "^0.6.2",
+    "nodemailer": "^4.6.7",
+    "sendmail": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {

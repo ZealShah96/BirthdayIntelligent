@@ -1,0 +1,5 @@
+There will be 3 level
+
+1.Relation with date and number:Id as key and date as value 
+2.Relation with key get from date table and context as values of string attached with email and name and other details.
+3.Relation with values from 2nd and use new row in table as entry of name and context.
