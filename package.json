@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "date-and-time": "^0.6.2",
+    "node-cron": "^1.2.1",
     "nodemailer": "^4.6.7",
     "sendmail": "^1.4.1"
   },
