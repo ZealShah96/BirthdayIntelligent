@@ -17,7 +17,7 @@ supportFunctions.sendMail=function(date,daysbeforeitsend){
     from: 'zealshah96@gmail.com',
     to: 'zealshah96@gmail.com',
     subject: 'This is reminder for there is birthday on this date'+date,
-    text: 'i am informing you before :-' + daysbeforeitsend+' days.'
+    text: 'i am informing you before :' + daysbeforeitsend+' days.'
   };
     
     transport.transporter(mailOptions,function(statusCode,string){
