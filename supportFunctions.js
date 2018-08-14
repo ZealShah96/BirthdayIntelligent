@@ -37,6 +37,9 @@ supportFunctions.findDatedifference=function (startDate,endDate) {
     var date2 = new Date(endDate);
     var timeDiff = Math.abs(date2.getTime() - date1.getTime());
     var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    if(diffDays>365){
+        diffDays=diffDays-365;
+    }
     return diffDays;
 }
 
