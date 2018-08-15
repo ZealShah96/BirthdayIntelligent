@@ -11,14 +11,14 @@ var dateCalculationFunctions={};
 //supportFnctions.sendMail(birthdayDate,supportFnctions.findDatedifference(todayDate,birthdayDate));
 //dateCalculationFunctions
 
-dateCalculationFunctions.findDates=function(datestring){
+dateCalculationFunctions.findDates = function (datestring, stringofdata){
     
     var todayDate = new Date();
 
     var birthdayDate = datestring;
 
-    supportFnctions.logging(birthdayDate);
-    supportFnctions.sendMail(birthdayDate, supportFnctions.findDatedifference(birthdayDate,todayDate)); 
+   // supportFnctions.logging(birthdayDate);
+    supportFnctions.sendMail(birthdayDate, supportFnctions.findDatedifference(birthdayDate, todayDate), stringofdata); 
 }
 
 //dateCalculationFunctions.findDates("09-05-1996");

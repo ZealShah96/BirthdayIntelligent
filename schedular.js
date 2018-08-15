@@ -4,20 +4,36 @@ var finalDates=require('./findDates')
 //var file=require();
 
 var schedulefunctions={};
-
-schedulefunctions.scheduleJobForHour=function(date){
+//schedule function for specific date
+schedulefunctions.scheduleJobForHour=function(date,scheduleDate){
+    //intilize data
     var birthday = new Date(date);
+  //current date
     var currentdate= new Date();
-  //  var date = new Date(2018,08,10,21,08,0);
-    
-    var newDateWithAdded = currentdate.setMilliseconds(currentdate.getMilliseconds() + 40);
-  console.log("Job scheduled for who has birthday on this date:"
+    //make it schedule date
+   var newDateWithAdded= supportFunctions.birthDayPassedCurrentDay(birthday)
+        ? birthday.setFullYear(currentdate.getFullYear() + 1)
+       : birthday.setFullYear(currentdate.getFullYear());
+ //   var newDateWithAdded = currentdate.setMilliseconds(currentdate.getMilliseconds() + 40);
+
+//make string data for birthday and current date.
+  var stringofdata="Job scheduled for who has birthday on this date:"
        + birthday.toDateString() + "" + birthday.toTimeString()
-        + "on this time" + currentdate); 
-    schedule.scheduleJob(newDateWithAdded,function (callback) {
-        finalDates.findDates(birthday.setFullYear(currentdate.getFullYear()+1));     
-        birthday = supportFunctions.findTimeBetween2Time(birthday, currentdate);
+      + "on this time" +
+      Date(newDateWithAdded); 
+    
+  //schedule date with time.  
+        schedule.scheduleJob(newDateWithAdded,function (callback) {
+            finalDates.findDates(newDateWithAdded,stringofdata);     
+    
+ 
+
+            birthday = supportFunctions.findTimeBetween2Time(birthday, currentdate);
     });
+    console.log(schedule.Job.length);
+    console.log(stringofdata);
+
+    
 }
 //testing purpose
 //schedulefunctions.scheduleJobForHour();
