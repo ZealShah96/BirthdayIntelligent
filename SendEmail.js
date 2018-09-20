@@ -6,7 +6,7 @@ var transporterCollection={};
     service: 'gmail',
     auth: {
       user: 'zealshah96@gmail.com',
-      pass: 'Zaqxswcde1996@'
+      pass: 'your PassWord'
     }
   });
 

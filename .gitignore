@@ -1,0 +1,4 @@
+*.bat
+*.msi
+node_modules/
+.vscode/
